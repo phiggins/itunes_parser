@@ -1,7 +1,6 @@
-require 'rubygems'
 require 'nokogiri'
 
-class ItunesParser
+module ItunesParser
   def self.parse(xml)
     doc = Nokogiri::XML(xml)
     return parse_tracks(doc), parse_playlists(doc)
@@ -49,22 +48,4 @@ class ItunesParser
       hash
     end
   end
-end
-
-if __FILE__ == $0
-  if ARGV.empty?
-    $stderr.puts "usage: #{$0} <itunes xml file>"
-    exit 1
-  end
-  require 'benchmark'
-
-  xml = open(ARGV.first)
-
-  tracks, playlists = nil
-  Benchmark.bm do |b|
-    b.report "nokogiri" do
-      tracks, playlists = ItunesParser.parse(xml)
-    end
-  end
-  puts "tracks: #{tracks.size}\tplaylists: #{playlists.size}"
 end

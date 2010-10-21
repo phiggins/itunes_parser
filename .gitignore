@@ -1,0 +1,7 @@
+# vim files
+.*.swp
+
+# secretz
+lib/hangman/creds.rb
+
+.bundle/*
