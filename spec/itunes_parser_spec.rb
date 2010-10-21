@@ -5,13 +5,22 @@ require 'minitest/autorun'
 
 describe ItunesParser do
   before do
-    @itunes = ItunesMock.generate
+    @track    = {"Name" => "Test Song"}
+    @playlist = {"Name" => "Test Playlist"}
+    @itunes = ItunesMock.generate( :tracks => [@track], :playlists => [@playlist])
   end
 
-  it "should parse the most basic of things" do
+  it "should parse the most basic of tracks" do
     tracks, playlists = ItunesParser.parse(@itunes)
 
-    tracks.size.must_equal 1
-    playlists.size.must_equal 1
+    track = tracks.first
+    track["Name"].must_equal "Test Song"
+  end
+
+  it "should parse the most basic of playlists" do
+    tracks, playlists = ItunesParser.parse(@itunes)
+
+    playlist = playlists.first
+    playlist["Name"].must_equal "Test Playlist"
   end
 end
