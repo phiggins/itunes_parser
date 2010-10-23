@@ -46,37 +46,37 @@ describe ItunesParser do
     end
 
     it "parses track attributes" do
-      track = ItunesParser.parse(@itunes).first.first.last
+      track = ItunesParser.new(@itunes).tracks.values.first
       track["Artist"].must_equal "Boards of Canada"
     end
 
     it "parses playlist attributes" do
-      playlist = ItunesParser.parse(@itunes).last.first
+      playlist = ItunesParser.new(@itunes).playlists.first
       playlist["Name"].must_equal "Library"
     end
 
     it "parses non-ascii strings" do
-      playlist = ItunesParser.parse(@itunes).last.last
+      playlist = ItunesParser.new(@itunes).playlists.last
       playlist["Name"].must_equal "90’s Music"
     end
 
     it "typecasts date strings into Time instances" do
-      date = ItunesParser.parse(@itunes).first.first.last["Date Added"]
+      date = ItunesParser.new(@itunes).tracks.values.first["Date Added"]
       date.must_equal Time.gm(2007, 2, 15, 20, 48, 1)
     end
 
     it "typecasts integer strings into Fixnums" do
-      bitrate = ItunesParser.parse(@itunes).first.first.last["Bitrate"]
+      bitrate = ItunesParser.new(@itunes).tracks.values.first["Bitrate"]
       bitrate.must_equal 128
     end
 
     it "typecasts false strings into false" do
-      visible = ItunesParser.parse(@itunes).last.first["Visible"]
+      visible = ItunesParser.new(@itunes).playlists.first["Visible"]
       visible.must_equal false
     end
 
     it "typecasts true strings into true" do
-      explicit = ItunesParser.parse(@itunes).first.first.last["Explicit"]
+      explicit = ItunesParser.new(@itunes).tracks.values.first["Explicit"]
       explicit.must_equal true
     end
   end
