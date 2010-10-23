@@ -25,15 +25,9 @@ class ItunesParser
       track    = {}
       last_key = nil
 
-      node.children.each do |child|
-        next if child.blank? # Don't care about blank nodes
-
-        case child.name 
-        when 'key'
-          last_key = child.text
-        else 
-          track[last_key] = self.class.cast_value(child.name, child.text)
-        end
+      node.xpath("key").each do |key|
+        value = key.next
+        track[key.text] = self.class.cast_value(value.name, value.text)
       end
 
       id = track["Track ID"]
