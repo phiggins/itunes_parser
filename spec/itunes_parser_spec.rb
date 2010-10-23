@@ -8,39 +8,39 @@ require 'minitest/autorun'
 require 'stringio'
 
 describe ItunesParser do
-  describe "#parse" do
-    before do
-      @tracks     = [ { "Name"        => "Trapped", 
-                        "Artist"      => "Boards of Canada",
-                        "Album"       => "A Few Old Tracks",
-                        "Bitrate"     => 128,
-                        "Date Added"  => "2007-02-15T20:48:01Z",
-                        "Explicit"    => true },
-                      { "Name"        => "Fak!!!",
-                        "Artist"      => "Truckasaurus",
-                        "Album"       => "Tea Parties, Guns & Valor",
-                        "Bitrate"     => 192,
-                        "Date Added"  => "2009-06-11T01:13:21Z" } ]
+  before do
+    @tracks     = [ { "Name"        => "Trapped", 
+                      "Artist"      => "Boards of Canada",
+                      "Album"       => "A Few Old Tracks",
+                      "Bitrate"     => 128,
+                      "Date Added"  => "2007-02-15T20:48:01Z",
+                      "Explicit"    => true },
+                    { "Name"        => "Fak!!!",
+                      "Artist"      => "Truckasaurus",
+                      "Album"       => "Tea Parties, Guns & Valor",
+                      "Bitrate"     => 192,
+                      "Date Added"  => "2009-06-11T01:13:21Z" } ]
 
-      @playlists  = [ { "Name"        => "Library",
-                        "Master"      => true,
-                        "Visible"     => false },
-                      { "Name"        => "90’s Music" } ]
-      
-      @itunes = ItunesMock.generate(:tracks => @tracks, :playlists => @playlists)
-      # puts @itunes
-    end
+    @playlists  = [ { "Name"        => "Library",
+                      "Master"      => true,
+                      "Visible"     => false },
+                    { "Name"        => "90’s Music" } ]
+    
+    @itunes = ItunesMock.generate(:tracks => @tracks, :playlists => @playlists)
+    # puts @itunes
+  end
 
+  describe ".new" do
     it "parses a string of xml" do
-      tracks, playlists = ItunesParser.parse(@itunes)
-      tracks.wont_be_empty
-      playlists.wont_be_empty
+      parser = ItunesParser.new(@itunes)
+      parser.tracks.wont_be_empty
+      parser.playlists.wont_be_empty
     end
 
     it "parses an IO object" do
-      tracks, playlists = ItunesParser.parse( StringIO.new(@itunes) )
-      tracks.wont_be_empty
-      playlists.wont_be_empty
+      parser = ItunesParser.new( StringIO.new(@itunes) )
+      parser.tracks.wont_be_empty
+      parser.playlists.wont_be_empty
     end
 
     it "parses track attributes" do
@@ -100,6 +100,30 @@ describe ItunesParser do
 
     it "parses 'false' into FalseClass" do
       ItunesParser.cast_value('false', nil).must_equal false 
+    end
+  end
+
+  describe ".parse" do
+    it "accepts an :on_track block and calls it for each track parsed" do
+      names = []
+      on_track = lambda do |track|
+        names << track["Name"]
+      end
+
+      ItunesParser.parse(@itunes, :on_track => on_track)
+      
+      names.must_equal ["Trapped", "Fak!!!"]
+    end
+
+    it "accepts an :on_playlist block and calls it for each playlist parsed" do
+      names = []
+      on_playlist = lambda do |playlist|
+        names << playlist["Name"]
+      end
+
+      ItunesParser.parse(@itunes, :on_playlist => on_playlist)
+      
+      names.must_equal ["Library", "90’s Music"]
     end
   end
 end
