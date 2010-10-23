@@ -22,12 +22,9 @@ class ItunesParser
 
   def parse_tracks
     @doc.xpath('/plist/dict/dict/dict').each_with_object({}) do |node, hash|
-      track    = {}
-      last_key = nil
-
-      node.xpath("key").each do |key|
+      track = node.xpath("key").each_with_object({}) do |key, h|
         value = key.next
-        track[key.text] = self.class.cast_value(value.name, value.text)
+        h[key.text] = self.class.cast_value(value.name, value.text)
       end
 
       id = track["Track ID"]
