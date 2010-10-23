@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Tracks</key>
+    <dict>
+      <key>1</key>
+      <dict>
+        <key>Track ID</key><integer>1</integer>
+        <key>Name</key><string>Test song name 0</string>
+        <key>Artist</key><string>Test artist name 0</string>
+        <key>Album</key><string>Test album name 0</string>
+        <key>Genre</key><string>Test genre 0</string>
+        <key>Kind</key><string>MPEG audio file</string>
+        <key>Size</key><integer>0</integer>
+        <key>Total Time</key><integer>0</integer>
+        <key>Track Number</key><integer>0</integer>
+        <key>Track Count</key><integer>0</integer>
+        <key>Date Modified</key><date>2005-06-27T23:23:32Z</date>
+        <key>Date Added</key><date>2007-02-15T20:51:44Z</date>
+        <key>Bit Rate</key><integer>0</integer>
+        <key>Sample Rate</key><integer>0</integer>
+        <key>Persistent ID</key><string>FB6DB887866AB5C5</string>
+        <key>Track Type</key><string>File</string>
+        <key>Location</key><string>file://localhost/C:/path/to/my/music/boy/this/path/has/lots/of/subfolders</string>
+        <key>File Folder Count</key><integer>-1</integer>
+        <key>Library Folder Count</key><integer>-1</integer>
+      </dict>
+      <key>2</key>
+      <dict>
+        <key>Track ID</key><integer>2</integer>
+        <key>Name</key><string>Test song name 1</string>
+        <key>Artist</key><string>Test artist name 1</string>
+        <key>Album</key><string>Test album name 1</string>
+        <key>Genre</key><string>Test genre 1</string>
+        <key>Kind</key><string>MPEG audio file</string>
+        <key>Size</key><integer>1</integer>
+        <key>Total Time</key><integer>1</integer>
+        <key>Track Number</key><integer>1</integer>
+        <key>Track Count</key><integer>1</integer>
+        <key>Date Modified</key><date>2005-06-27T23:23:32Z</date>
+        <key>Date Added</key><date>2007-02-15T20:51:44Z</date>
+        <key>Bit Rate</key><integer>1</integer>
+        <key>Sample Rate</key><integer>1</integer>
+        <key>Persistent ID</key><string>FB6DB887866AB5C5</string>
+        <key>Track Type</key><string>File</string>
+        <key>Location</key><string>file://localhost/C:/path/to/my/music/boy/this/path/has/lots/of/subfolders</string>
+        <key>File Folder Count</key><integer>-1</integer>
+        <key>Library Folder Count</key><integer>-1</integer>
+      </dict>
+      <key>3</key>
+      <dict>
+        <key>Track ID</key><integer>3</integer>
+        <key>Name</key><string>Test song name 2</string>
+        <key>Artist</key><string>Test artist name 2</string>
+        <key>Album</key><string>Test album name 2</string>
+        <key>Genre</key><string>Test genre 2</string>
+        <key>Kind</key><string>MPEG audio file</string>
+        <key>Size</key><integer>2</integer>
+        <key>Total Time</key><integer>2</integer>
+        <key>Track Number</key><integer>2</integer>
+        <key>Track Count</key><integer>2</integer>
+        <key>Date Modified</key><date>2005-06-27T23:23:32Z</date>
+        <key>Date Added</key><date>2007-02-15T20:51:44Z</date>
+        <key>Bit Rate</key><integer>2</integer>
+        <key>Sample Rate</key><integer>2</integer>
+        <key>Persistent ID</key><string>FB6DB887866AB5C5</string>
+        <key>Track Type</key><string>File</string>
+        <key>Location</key><string>file://localhost/C:/path/to/my/music/boy/this/path/has/lots/of/subfolders</string>
+        <key>File Folder Count</key><integer>-1</integer>
+        <key>Library Folder Count</key><integer>-1</integer>
+      </dict>
+      <key>4</key>
+      <dict>
+        <key>Track ID</key><integer>4</integer>
+        <key>Name</key><string>Test song name 3</string>
+        <key>Artist</key><string>Test artist name 3</string>
+        <key>Album</key><string>Test album name 3</string>
+        <key>Genre</key><string>Test genre 3</string>
+        <key>Kind</key><string>MPEG audio file</string>
+        <key>Size</key><integer>3</integer>
+        <key>Total Time</key><integer>3</integer>
+        <key>Track Number</key><integer>3</integer>
+        <key>Track Count</key><integer>3</integer>
+        <key>Date Modified</key><date>2005-06-27T23:23:32Z</date>
+        <key>Date Added</key><date>2007-02-15T20:51:44Z</date>
+        <key>Bit Rate</key><integer>3</integer>
+        <key>Sample Rate</key><integer>3</integer>
+        <key>Persistent ID</key><string>FB6DB887866AB5C5</string>
+        <key>Track Type</key><string>File</string>
+        <key>Location</key><string>file://localhost/C:/path/to/my/music/boy/this/path/has/lots/of/subfolders</string>
+        <key>File Folder Count</key><integer>-1</integer>
+        <key>Library Folder Count</key><integer>-1</integer>
+      </dict>
+      <key>5</key>
+      <dict>
+        <key>Track ID</key><integer>5</integer>
+        <key>Name</key><string>Test song name 4</string>
+        <key>Artist</key><string>Test artist name 4</string>
+        <key>Album</key><string>Test album name 4</string>
+        <key>Genre</key><string>Test genre 4</string>
+        <key>Kind</key><string>MPEG audio file</string>
+        <key>Size</key><integer>4</integer>
+        <key>Total Time</key><integer>4</integer>
+        <key>Track Number</key><integer>4</integer>
+        <key>Track Count</key><integer>4</integer>
+        <key>Date Modified</key><date>2005-06-27T23:23:32Z</date>
+        <key>Date Added</key><date>2007-02-15T20:51:44Z</date>
+        <key>Bit Rate</key><integer>4</integer>
+        <key>Sample Rate</key><integer>4</integer>
+        <key>Persistent ID</key><string>FB6DB887866AB5C5</string>
+        <key>Track Type</key><string>File</string>
+        <key>Location</key><string>file://localhost/C:/path/to/my/music/boy/this/path/has/lots/of/subfolders</string>
+        <key>File Folder Count</key><integer>-1</integer>
+        <key>Library Folder Count</key><integer>-1</integer>
+      </dict>
+    </dict>
+    <key>Playlists</key>
+    <array>
+      <dict>
+        <key>Name</key><string>Test playlist 0</string>
+        <key>Playlist ID</key><integer>0</integer>
+        <key>Playlist Persistent ID</key><string>9D46E5C53E789370</string>
+        <key>All Items</key><true/>
+        <key>Smart Info</key><string>AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==</string>
+        <key>Smart Criteria</key><string>U0xzdAABAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAEAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAB8YAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAB88AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</string>
+        <key>Playlist Items</key>
+        <array>
+          <dict>
+            <key>Track ID</key><integer>1</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>2</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>3</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>4</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>5</integer>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>Name</key><string>Test playlist 1</string>
+        <key>Playlist ID</key><integer>1</integer>
+        <key>Playlist Persistent ID</key><string>9D46E5C53E789370</string>
+        <key>All Items</key><true/>
+        <key>Smart Info</key><string>AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==</string>
+        <key>Smart Criteria</key><string>U0xzdAABAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAEAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAB8YAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAB88AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</string>
+        <key>Playlist Items</key>
+        <array>
+          <dict>
+            <key>Track ID</key><integer>1</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>2</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>3</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>4</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>5</integer>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>Name</key><string>Test playlist 2</string>
+        <key>Playlist ID</key><integer>2</integer>
+        <key>Playlist Persistent ID</key><string>9D46E5C53E789370</string>
+        <key>All Items</key><true/>
+        <key>Smart Info</key><string>AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==</string>
+        <key>Smart Criteria</key><string>U0xzdAABAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAEAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAB8YAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAB88AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</string>
+        <key>Playlist Items</key>
+        <array>
+          <dict>
+            <key>Track ID</key><integer>1</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>2</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>3</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>4</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>5</integer>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>Name</key><string>Test playlist 3</string>
+        <key>Playlist ID</key><integer>3</integer>
+        <key>Playlist Persistent ID</key><string>9D46E5C53E789370</string>
+        <key>All Items</key><true/>
+        <key>Smart Info</key><string>AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==</string>
+        <key>Smart Criteria</key><string>U0xzdAABAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAEAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAB8YAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAB88AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</string>
+        <key>Playlist Items</key>
+        <array>
+          <dict>
+            <key>Track ID</key><integer>1</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>2</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>3</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>4</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>5</integer>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>Name</key><string>Test playlist 4</string>
+        <key>Playlist ID</key><integer>4</integer>
+        <key>Playlist Persistent ID</key><string>9D46E5C53E789370</string>
+        <key>All Items</key><true/>
+        <key>Smart Info</key><string>AQEAAwAAAAIAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==</string>
+        <key>Smart Criteria</key><string>U0xzdAABAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAEAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAB8YAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAB88AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</string>
+        <key>Playlist Items</key>
+        <array>
+          <dict>
+            <key>Track ID</key><integer>1</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>2</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>3</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>4</integer>
+          </dict>
+          <dict>
+            <key>Track ID</key><integer>5</integer>
+          </dict>
+        </array>
+      </dict>
+    </array>
+  </dict>
+</plist>
