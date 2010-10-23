@@ -4,19 +4,19 @@ require 'time' # For Time.parse
 
 class ItunesParser
   def self.parse(xml, procs={})
-    track_proc    = procs[:on_track]
-    playlist_proc = procs[:on_playlist]
+    on_track    = procs[:on_track]
+    on_playlist = procs[:on_playlist]
 
-    instance = new(xml)
+    parser = new(xml)
 
-    if track_proc
-      instance.on_track = track_proc
-      instance.parse_tracks
+    if on_track
+      parser.on_track = on_track
+      parser.parse_tracks
     end
 
-    if playlist_proc
-      instance.on_playlist = playlist_proc
-      instance.parse_playlists
+    if on_playlist
+      parser.on_playlist = on_playlist
+      parser.parse_playlists
     end
   end
 
@@ -37,7 +37,7 @@ class ItunesParser
   def parse_track(node)
     node.xpath("key").each_with_object({}) do |key, hash|
       value = key.next
-      hash[key.text] = self.class.cast_value(value.name, value.text)
+      hash[key.text] = cast_value(value.name, value.text)
     end
   end
 
@@ -61,7 +61,7 @@ class ItunesParser
         items = value.xpath("dict/integer").map {|i| i.text.to_i }
         hash[key_name] = items
       else
-        hash[key_name] = self.class.cast_value(value.name, value.text)
+        hash[key_name] = cast_value(value.name, value.text)
       end
     end
   end
@@ -76,7 +76,7 @@ class ItunesParser
     end
   end
 
-  def self.cast_value(type, value)
+  def cast_value(type, value)
     case type
     when 'integer'
       value.to_i

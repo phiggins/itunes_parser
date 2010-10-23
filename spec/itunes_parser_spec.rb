@@ -85,21 +85,25 @@ describe ItunesParser do
   end
 
   describe ".cast_value" do
+    before do
+      @parser = ItunesParser.new("")  
+    end
+
     it "parses itunes dates" do
-      date = ItunesParser.cast_value('date', "2009-06-11T01:13:21Z")
+      date = @parser.cast_value('date', "2009-06-11T01:13:21Z")
       date.must_equal Time.gm(2009, 6, 11, 01, 13, 21)
     end
 
     it "parses 'integer' into Fixnum" do
-      ItunesParser.cast_value('integer', '56').must_equal 56
+      @parser.cast_value('integer', '56').must_equal 56
     end
 
     it "parses 'true' into TrueClass" do
-      ItunesParser.cast_value('true', nil).must_equal true
+      @parser.cast_value('true', nil).must_equal true
     end
 
     it "parses 'false' into FalseClass" do
-      ItunesParser.cast_value('false', nil).must_equal false 
+      @parser.cast_value('false', nil).must_equal false 
     end
   end
 
