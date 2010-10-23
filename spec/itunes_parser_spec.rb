@@ -46,7 +46,7 @@ describe ItunesParser do
     end
 
     it "parses track attributes" do
-      track = ItunesParser.new(@itunes).tracks.values.first
+      track = ItunesParser.new(@itunes).tracks.first
       track["Artist"].must_equal "Boards of Canada"
     end
 
@@ -61,12 +61,12 @@ describe ItunesParser do
     end
 
     it "typecasts date strings into Time instances" do
-      date = ItunesParser.new(@itunes).tracks.values.first["Date Added"]
+      date = ItunesParser.new(@itunes).tracks.first["Date Added"]
       date.must_equal Time.gm(2007, 2, 15, 20, 48, 1)
     end
 
     it "typecasts integer strings into Fixnums" do
-      bitrate = ItunesParser.new(@itunes).tracks.values.first["Bitrate"]
+      bitrate = ItunesParser.new(@itunes).tracks.first["Bitrate"]
       bitrate.must_equal 128
     end
 
@@ -76,7 +76,7 @@ describe ItunesParser do
     end
 
     it "typecasts true strings into true" do
-      explicit = ItunesParser.new(@itunes).tracks.values.first["Explicit"]
+      explicit = ItunesParser.new(@itunes).tracks.first["Explicit"]
       explicit.must_equal true
     end
   end
