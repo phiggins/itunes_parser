@@ -25,8 +25,7 @@ module ItunesMock
 
                 track.each do |key, value|
                   xml.key(key)
-                  # TODO: assume they're all strings for now
-                  xml.string(value)
+                  ruby_to_itunes_type(xml, value)
                 end
               end
             end
@@ -38,17 +37,16 @@ module ItunesMock
               xml.dict do
                 playlist.each do |key, value|
                   xml.key(key)
-                  # TODO: Just like tracks, assume it's all strings
-                  xml.string(value)
-                  xml.key("Playlist Items")
-                  xml.array do
-                    # TODO: All tracks are on all playlists. 
-                    # Figure out something more clever?
-                    (1..tracks.size).each do |i|
-                      xml.dict do
-                        xml.key("Track ID")
-                        xml.integer(i)
-                      end
+                  ruby_to_itunes_type(xml, value)
+                end
+                xml.key("Playlist Items")
+                xml.array do
+                  # TODO: All tracks are on all playlists. 
+                  # Figure out something more clever?
+                  (1..tracks.size).each do |i|
+                    xml.dict do
+                      xml.key("Track ID")
+                      xml.integer(i)
                     end
                   end
                 end
@@ -59,6 +57,23 @@ module ItunesMock
       end
     end
 
+    # Try to make the output match itunes xml as much as possible.
     builder.to_xml.gsub(/<\/key>(?!\s+<(array|dict)>)\s+/, "</key>")
+  end
+
+  # Guess the itunes type from the ruby type
+  def self.ruby_to_itunes_type(xml, var)
+    case var
+    when Fixnum 
+      xml.integer(var)
+    when false
+      xml.false
+    when true
+      xml.true
+    when /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/
+      xml.date(var)
+    else
+      xml.string(var)
+    end
   end
 end
