@@ -7,8 +7,6 @@ require 'minitest/autorun'
 
 require 'stringio'
 
-# Add tests for playlist items array
-#
 describe ItunesParser do
   describe "#parse" do
     before do
@@ -30,7 +28,7 @@ describe ItunesParser do
                       { "Name"        => "90’s Music" } ]
       
       @itunes = ItunesMock.generate(:tracks => @tracks, :playlists => @playlists)
-      #puts @itunes
+      # puts @itunes
     end
 
     it "parses a string of xml" do
@@ -78,6 +76,11 @@ describe ItunesParser do
     it "typecasts true strings into true" do
       explicit = ItunesParser.new(@itunes).tracks.first["Explicit"]
       explicit.must_equal true
+    end
+
+    it "parses a playlist's 'Playlist Items' into an array of integers" do
+      items = ItunesParser.new(@itunes).playlists.first["Playlist Items"]
+      items.must_equal [1,2]
     end
   end
 

@@ -22,7 +22,7 @@ class ItunesParser
 
   def parse_tracks
     @doc.xpath('/plist/dict/dict/dict').map do |node|
-      track = node.xpath("key").each_with_object({}) do |key, hash|
+      node.xpath("key").each_with_object({}) do |key, hash|
         value = key.next
         hash[key.text] = self.class.cast_value(value.name, value.text)
       end
@@ -31,28 +31,18 @@ class ItunesParser
 
   def parse_playlists
     @doc.xpath('/plist/dict/array/dict').map do |node|
-      hash = {}
-      last_key = nil
+      node.xpath("key").each_with_object({}) do |key, hash|
+        value = key.next
+        value = value.next while value.blank?
+        key_name = key.text
 
-      node.children.each do |child|
-        next if child.blank?
-
-        if last_key == "Playlist Items"
-          hash[last_key] = child.children.map do |child_node|
-            next if child_node.blank?
-            child_node.children[2].children.first.text
-          end.compact
+        if key_name == 'Playlist Items'
+          items = value.xpath("dict/integer").map {|i| i.text.to_i }
+          hash[key_name] = items
         else
-          case child.name 
-          when 'key'
-            last_key = child.text
-          else 
-            hash[last_key] = self.class.cast_value(child.name, child.text)
-          end
+          hash[key_name] = self.class.cast_value(value.name, value.text)
         end
       end
-
-      hash
     end
   end
 
