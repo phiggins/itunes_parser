@@ -39,16 +39,17 @@ module ItunesParser
           elsif @parsing_playlists
             end_playlists
           end
-        when 'true'
-          @current << @key_string << true
-        when 'false'
-          @current << @key_string << false
         else
           if @parsing_playlist_items
             @current_playlist_items << @buffer.to_i
           elsif @parsing_playlists || @parsing_tracks
-            #puts "key_string: #{@key_string}\tbuffer: #{@buffer.strip}"
-            @current << @key_string << @buffer.strip
+            if name == 'true'
+              @current << @key_string << true 
+            elsif name == 'false'
+              @current << @key_string << false
+            else
+              @current << @key_string << @buffer.strip
+            end
           end
         end
 
