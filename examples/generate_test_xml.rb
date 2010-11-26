@@ -13,4 +13,4 @@ File.open(file, "w") do |f|
   ItunesParser::MockXML.generate(:tracks => n, :playlists => p_n, :target => f)
 end
 
-puts "Generated %.3f MB xml file." % 91.06637954711914
+puts "Generated %.3f MB xml file." % (File.size(file)/1024.0/1024.0)
